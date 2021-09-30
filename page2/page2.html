@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-tw"> <!-- 語言 -->
+  <head>
+    <title>This is demon page2</title> <!-- 瀏覽器標籤名稱 -->
+    <meta charset="utf-8"> <!-- 編碼 -->
+    <meta name="author" content="NCLAB">
+    <meta name="description" content="This is a demon page.">
+    <link rel="Shortcut Icon" href="../rabbit.ico" type="image/x-icon"> <!-- 連結標籤icon -->
+    <link rel="stylesheet" href="page2_style.css"> <!-- 連結css檔 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="page2_front.js" async></script>
+  </head>
+<!-- 最外框 然後讓它貼上邊 -->
+<body>
+  <div id="sidebar_left">
+    <p class ="static_word">地點  :</p>
+      <select id="place_select" class="position_menu" disabled="disabled">
+        <option value="成大工科1">成大工科1</option>
+        <option value="成大工科2">成大工科2</option>
+      </select>
+    <P class ="static_word">區域 :</p>
+    <p id="selected_zone" class = "dynamic_word"></p>
+    <p id = "start_time" class = "static_word">開始時間 :</p>
+    <input type="datetime-local" id="start_datepicker" class="time_menu" value= "2020-07-20T00:00" min="2020-07-20T00:00">
+    <p id = "start_time" class = "static_word">結束時間 :</p>
+    <input type="datetime-local" id="end_datepicker" class="time_menu" value = "2020-07-30T00:00" min="2020-07-25T00:00" >
+    <button id="search_btn" class = "static_button">查詢</button>
+    <div  class = "static_word">已選擇區域 :</div>
+    <table id="selected_position"></table>
+    <button id="remove_btn" class = "static_button">刪除</button>
+    <p class="static_word">數值更新時間 :</p>
+    <p id = "update_time_value" class = "dynamic_word">---</p>
+  </div>
+
+  <div id="content">
+    <div class="solarzone">
+      <span class="solartitle">Array</span>
+      <div id="array_area"></div>
+    </div>
+    <div class="solarzone">
+      <span class="solartitle">String</span>
+      <div id="string_area"></div>
+    </div>
+    <div class="solarzone">
+      <span class="solartitle">Number</span>
+      <div id="number_area"></div>
+    </div>
+    <button id="send_btn">觀看圖表</button>
+    <!-- onClick="clic()" -->
+  </div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 3.8vmin; /*整體預設文字大小*/
+  font-family:Microsoft JhengHei; /*整體字型預設 微軟正黑體*/
+  background-color: #ECFFFF;
+}
+body { /*定義整體、預設文字大小*/
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+td {
+  border-style: none;
+  user-select: none; /*設定文字不被滑鼠反白*/
+}
+#sidebar_left { /*左邊視窗*/
+  margin: 0 auto;
+  width: 20%;
+  height: 100%;
+  padding-top: 0;
+  padding-left: 0%;
+  background-color: rgb(233, 233, 233);
+  position: fixed;
+  overflow: scroll;
+}
+#selected_position { /*繪圖區域框框*/
+  margin: 5%;
+  background-color: rgb(255, 255, 255);
+  font-family:Arial;
+  font-size: 3.5vmin;
+  border-style:solid;
+}
+#content {
+  margin-left: 20%;
+  margin-right: 0%;
+  padding-left: 0%;
+  padding-right: 0%;
+  padding-top: 0px;
+  height: 100%;
+  background-attachment: fixed;
+}
+#send_btn { /*右下角的觀看圖表按鈕*/
+  padding: 5px;margin:50px;
+  background-color: skyblue;
+  border-radius:10px;
+  font-size:30px;
+  position: absolute;
+  bottom: 3px;
+  right: 6px;
+  vertical-align:middle;
+  font-weight: bold;
+  font-family:Microsoft JhengHei;
+}
+.static_word {
+  margin-top: 5%;
+  margin-left: 3%;
+  margin-bottom: 0%;
+  font-size: 100%;
+}
+.position_menu {
+  margin-top: 0%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  font-size: 80%;
+  font-family:Microsoft JhengHei; /*選單設定字體*/
+  color: #666666;
+  background-color: #AAAAAA;
+  border: 1px solid;
+}
+.static_button {
+  margin-left: 70%;
+  font-size: 80%;
+  font-family:Microsoft JhengHei; /*按鈕設定字體*/
+  font-weight:bold; /*按鈕文字粗體*/
+  background-color: #FFFFF0;
+  user-select: none; /*設定文字不被滑鼠反白*/
+}
+.time_menu {
+  margin-top: 0%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  font-size: 60%;
+  font-family:Microsoft JhengHei; /*選單要設定字體*/
+}
+.dynamic_word {
+  margin-top: 5px;
+  margin-left: 5%;
+  margin-bottom: 10%;
+  font-size: 110%;
+}
+.solarzone {
+  margin-top: 0%;
+  margin-left: 30%;
+}
+.solar_array {
+  background-color: white;
+  white-space:pre-wrap;
+  border-radius:10px;
+  font-size:25px;
+  width: 250px;
+  height: 130px;
+  display: inline-block;
+  vertical-align:top;
+}
+.solar_string {
+  background-color: white;
+  white-space:pre-wrap;
+  border-radius:10px;
+  font-size:25px;
+  width: 250px;
+  height: 130px;
+  display: inline-block;
+  vertical-align:top;
+}
+.solar_number {
+  background-color: white;
+  white-space:pre-wrap;
+  border-radius:10px;
+  font-size:25px;
+  width: 250px;
+  height: 130px;
+  /* 左右並排 對其上方 margin=距離邊邊的距離padding=距離自己設定框框的距離 border-radius倒園角 */
+  display: inline-block;
+  vertical-align:top;
+}
+.solartitle {
+  margin-left: 0%;
+  background-color: #C2FF68;
+  white-space:pre-wrap;
+  border-radius:10px;
+  font-size:25px;
+  width: 250px;
+  height: 130px;
+}
+.line_color { /*將會被js使用，在左邊顯示有選取哪些區域*/
+  content: "";
+  margin-left: 0%;
+  display: inline-block;
+  width: 3.5vmin;
+  height: 3.5vmin;
+  background-color: rgba(0, 120, 220, 0.5);
+  border-color: rgba(0, 160, 220, 1);
+  border-radius: 100%;
+  vertical-align: middle;
+  border-style: solid;
+}

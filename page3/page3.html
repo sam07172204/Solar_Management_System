@@ -1,0 +1,67 @@
+<!DOCTYPE html> <!-- HTML註解方式 -->
+<html lang="zh-tw"> <!-- 語言 -->
+  <head>
+    <title>This is demon page3</title> <!-- 瀏覽器標籤名稱 -->
+    <meta charset="utf-8"> <!-- 編碼 -->
+    <meta name="author" content="NCLAB">
+    <meta name="description" content="This is a demon page.">
+    <link rel="Shortcut Icon" href="../rabbit.ico" type="image/x-icon"> <!-- 連結標籤icon -->
+    <link rel="stylesheet" href="page3_style.css"> <!-- 連結css檔 -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script> <!-- import chart.js -->
+    <script src="page3_front.js" async></script> <!-- 連結js檔 -->
+  </head>
+  <body> <!-- 看得到的內容 -->
+    <div id="sidebar_left">
+      <p class="static_word">地點 :</p>
+      <select id="place_select" class="position_menu" disabled="disabled">
+        <option value="成大工科1">成大工科1</option>
+        <option value="成大工科2">成大工科2</option>
+      </select>
+      <p class="static_word">開始時間 :</p>
+      <input type="datetime-local" id="start_datepicker" class="time_menu">
+      <p class="static_word">結束時間 :</p>
+      <input type="datetime-local" id="end_datepicker" class="time_menu">
+      <button id="search_btn" class = "static_button">查詢</button>
+      <p class="static_word">繪圖區域 :</p>
+      <table id="selected_position"></table>
+      <p class="static_word">數值更新時間 :</p>
+      <p id = "update_time_value" class = "dynamic_word">---</p>
+    </div>
+    <div id="content">
+      <div id="display_chart">
+          選取要顯示的圖表<br>
+          <label class="visible_btn_set">
+            <input type="checkbox" class="visible_btn"><span>功率</span>
+          </label>
+          <label class="visible_btn_set">
+            <input type="checkbox" class="visible_btn"><span>電壓</span>
+          </label>
+          <label class="visible_btn_set">
+            <input type="checkbox" class="visible_btn"><span>電流</span>
+          </label>
+          <label class="visible_btn_set">
+            <input type="checkbox" class="visible_btn"><span>觸點溫度</span>
+          </label>
+          <label class="visible_btn_set">
+            <input type="checkbox" class="visible_btn"><span>比例照度</span>
+          </label>
+          <label class="visible_btn_set">
+            <input type="checkbox" class="visible_btn"><span>獲利</span>
+          </label>
+          <label class="visible_btn_set">
+            <input type="checkbox" class="visible_btn"><span>累計環境貢獻</span>
+          </label>
+      </div>
+      <canvas id="power_chart" width="5vw" height="2vh" class="canvas"></canvas>
+      <canvas id="voltage_chart" width="5vw" height="2vh" class="canvas"></canvas>
+      <canvas id="current_chart" width="5vw" height="2vh" class="canvas"></canvas>
+      <canvas id="contact_temperature_chart" width="5vw" height="2vh" class="canvas"></canvas>
+      <canvas id="percentage_illuminance_chart" width="5vw" height="2vh" class="canvas"></canvas>
+      <canvas id="rate_chart" width="5vw" height="2vh" class="canvas"></canvas>
+      <canvas id="environment_chart" width="5vw" height="2vh" class="canvas"></canvas>
+      <br><br><br><br><br>
+    </div>
+  </body>
+</html>
