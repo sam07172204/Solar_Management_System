@@ -1,0 +1,61 @@
+<!DOCTYPE html> <!-- HTML註解方式 -->
+<html lang="zh-tw"> <!-- 語言 -->
+  <head>
+    <meta charset="utf-8"> <!-- 編碼 -->
+    <title>This is a demon page</title> <!-- 瀏覽器標籤名稱 -->
+    <meta name="author" content="NCLAB">
+    <meta name="description" content="This is a demon page.">
+    <link rel="Shortcut Icon" href="../rabbit.ico" type="image/x-icon"> <!-- 連結標籤icon -->
+    <link rel="stylesheet" href="page1_style.css"> <!-- 連結css檔 -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script> <!-- import chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="page1_front.js" async></script> <!-- 連結js檔 -->
+  </head>
+  <body> <!-- 看得到的內容 -->
+        <!-- 時間選擇 -->
+    <div id="sidebar_left" calss="s">
+      <p id = "place_c"  class = "static_word">地點 :</p>
+      <select id="place" class="position_menu">
+        <option value="成大工科1">成大工科1</option>
+        <option value="成大工科2">成大工科2</option>
+      </select>
+      <p id = "start_time" class = "static_word">開始時間 :</p>
+      <input type="datetime-local" id="start_datepicker" class="time_menu" value= "2020-07-01T00:00" min="2020-07-01T00:00" >
+      <p id = "end_time" class = "static_word">結束時間 :</p>
+      <input type="datetime-local" id="end_datepicker" class="time_menu" value = "2020-07-31T00:00" min="2020-07-01T00:00" >
+      <button id="search_btn"  class ="static_button" >查詢</button>
+      <p id = "all_power" class = "static_word">總發電量 :</p>
+      <p id = "all_power_value" class = "dynamic_word">---KWh</p>
+      <p id = "all_money" class = "static_word">總獲利量  :</p>
+      <p id = "all_money_value" class = "dynamic_word">---</p>
+      <p id = "weather" class = "static_word">天氣 :</p>
+      <p id = "weather_value" class = "dynamic_word">晴</p>
+      <p id = "update_time" class = "static_word">  數值更新時間 :</p>
+      <p id = "update_time_value" class = "dynamic_word">---</p>
+    </div>
+    <div class="card">
+     <!-- 空拍圖 -->
+       <img src="工科樓空拍圖 假想太陽能廠.png" id = "image">
+      <!-- ZONE按鈕 -->
+       <button id="btn_1" value ="bu,zone,A" class ="button" >
+          <p id ='update_0' value ="up,zone,A" class ="update">ZONE A
+          <br>太陽能板數量: 8<br>太陽能陣列數量: 2<br>發電量:--</p>
+       </button>
+       <button id="btn_2" value ="bu,zone,B" class ="button">
+          <p id ='update_1' value ="up,zone,B" class ="update">ZONE B
+          <br>太陽能板數量: 8<br>太陽能陣列數量: 2<br>發電量:--</p>
+        </button>
+       <button id="btn_3" value ="bu,zone,C" class ="button">
+         <p id ='update_2' value ="up,zone,C" class ="update">ZONE C
+         <br>太陽能板數量: 8<br>太陽能陣列數量: 2<br>發電量:--</p>
+       </button>
+       <button id="btn_4" value ="bu,zone,D" class ="button" >
+         <p id ='update_3' value ="up,zone,D" class ="update">ZONE D
+         <br>太陽能板數量: 8<br>太陽能陣列數量: 2<br>發電量:--</p>
+       </button>
+       <!--  -->
+    </div>
+  </body>
+</html>
